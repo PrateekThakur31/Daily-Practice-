@@ -1,0 +1,64 @@
+whoami → Displays the currently logged-in username.
+
+pwd → Shows the present working directory.
+
+date → Prints today’s date and time.
+
+cal → Displays the calendar for the current month.
+
+cal 2025 → Shows the calendar for the entire year 2025.
+
+clear → Clears the terminal screen.
+
+mkdir : Create a new directory (folder)
+        mkdir s3
+        mkdir dev
+        mkdir qa
+
+rmdir : Remove an empty directory
+        rmdir qa
+
+rm -rf <dir> : Delete a non-empty directory and its contents
+        rm -rf devops
+
+ls : List files and directories in the current working directory
+
+ls -l : Display files in a detailed (long) format, sorted alphabetically
+
+ls -lr : Show files in reverse alphabetical order
+
+ls -lt : List files with the newest files at the top
+
+ls -ltr : Show files with the oldest files at the top
+
+ls -la : Display all files, including hidden ones
+
+touch : Create empty files
+        touch t1.txt
+        touch t2.txt t3.txt
+
+cd : Change directory
+        cd dir-name
+        cd ..
+
+rm : Delete a file or directory
+        rm t1.txt
+        rm -rf <dir-name>
+
+mv : Rename or move a file/directory
+        mv existing-name new-name
+        mv current-location new-location
+
+cat : Create a new file, append data, and display file content
+
+        # Create a new file and add data
+        cat > t1.txt
+
+        # Append data to an existing file
+        cat >> t1.txt
+
+        # Display file content
+        cat t1.txt
+
+        # Display file content with line numbers
+        cat -n t1.txt
