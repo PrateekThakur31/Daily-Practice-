@@ -62,3 +62,77 @@ cat : Create a new file, append data, and display file content
 
         # Display file content with line numbers
         cat -n t1.txt
+
+
+        File Creation Commands
+    ===================================
+
+        touch : Create an empty file
+        cat   : Create a file and add data
+        cp    : Copy content from one file to another (cp t1.txt t2.txt)
+        vi    : Create and open a file for editing (vi t3.txt)
+
+
+        Reading File Data
+   ===============================
+
+        cat   : Display file content from top to bottom
+        tac   : Display file content from bottom to top
+        head  : Show the first 10 lines of a file
+        tail  : Show the last 10 lines of a file
+        vi    : Open a file for viewing or editing
+
+
+        SED Command
+   =========================
+        => **SED** stands for **Stream Editor**
+
+        => **SED** is used for text processing (substituting, deleting, printing, inserting).
+
+        => It allows modifications to a file **without opening it**.
+
+        => **SED** is a powerful command in Linux.
+
+        # **Substituting Text**
+        - Replace the **first occurrence** of "linux" with "unix"
+          sed 's/linux/unix/' data.txt
+
+        - Replace the **second occurrence** of "linux" with "unix"
+          sed 's/linux/unix/2' data.txt
+
+        - Replace the **third occurrence** of "linux" with "unix"
+          sed 's/linux/unix/3' data.txt
+
+        - Replace **all occurrences** of "linux" with "unix"
+          sed 's/linux/unix/g' data.txt
+
+        - Substitute and **save changes** in the original file
+          sed -i 's/linux/unix/g' data.txt
+
+        # **Deleting Lines**
+        - Delete the **first line** of a file
+          sed -i '1d' data.txt
+
+        - Delete the **fourth line** of a file
+          sed -i '4d' data.txt
+
+        - Delete the **last line** of a file
+          sed -i '$d' data.txt
+
+        - Delete data from **nth line to the last line**
+          sed -i 'n,$d' data.txt
+          *(Replace `n` with a line number)*
+
+        - Delete data from **5th line to 15th line**
+          sed -i '5,15d' data.txt
+
+        # **Printing Specific Lines**
+        - Print data from **line number 10 to 20**
+          sed -n '10,20p' data.txt
+
+        # **Inserting Text**
+        - Insert text at the **2nd line**
+          sed '2i\I love India' data.txt
+
+        - Insert text at the **last line**
+          sed '$a\I am from PSAIT' data.txt
