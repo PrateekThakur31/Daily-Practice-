@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Web Login</title>
+
+    <!-- Internal CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        /* Green header section */
+        header {
+            background-color: #008069;
+            color: white;
+            height: 220px;
+            padding: 35px 10%;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* Main content */
+        main {
+            max-width: 950px;
+            margin: -90px auto 40px;
+            padding: 20px;
+        }
+
+        .login-card {
+            background-color: white;
+            padding: 45px;
+            border-radius: 4px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .instructions {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 27px;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        ol {
+            padding-left: 25px;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        li {
+            padding-left: 5px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #008069;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* QR code section */
+        .qr-section {
+            flex: 0 0 260px;
+            text-align: center;
+        }
+
+        .qr-code {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 15px;
+            border: 10px solid white;
+            outline: 1px solid #ddd;
+            background-color: #fff;
+            background-image:
+                repeating-conic-gradient(
+                    #222 0% 25%,
+                    #fff 0% 50%
+                );
+            background-size: 18px 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative corner squares */
+        .corner {
+            width: 58px;
+            height: 58px;
+            background: white;
+            border: 7px solid #222;
+            position: absolute;
+        }
+
+        .corner::after {
+            content: "";
+            position: absolute;
+            inset: 7px;
+            background: #222;
+        }
+
+        .top-left {
+            top: 0;
+            left: 0;
+        }
+
+        .top-right {
+            top: 0;
+            right: 0;
+        }
+
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+
+        .qr-note {
+            color: #667781;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* Additional information */
+        .help-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .help-section p {
+            margin: 10px 0;
+            color: #667781;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #667781;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 650px) {
+            header {
+                height: 170px;
+                padding: 25px;
+            }
+
+            main {
+                margin-top: -65px;
+                padding: 12px;
+            }
+
+            .login-card {
+                flex-direction: column;
+                padding: 25px 18px;
+                gap: 30px;
+            }
+
+            h1 {
+                font-size: 23px;
+            }
+
+            ol {
+                font-size: 15px;
+            }
+
+            .qr-section {
+                flex-basis: auto;
+            }
+
+            .qr-code {
+                width: 190px;
+                height: 190px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">☏ WhatsApp</div>
+</header>
+
+<main>
+    <section class="login-card">
+
+        <div class="instructions">
+            <h1>Use WhatsApp on your computer</h1>
+
+            <ol>
+                <li>Open WhatsApp on your phone.</li>
+                <li>On Android, tap the three-dot menu.
+                    On iPhone, open Settings.</li>
+                <li>Tap <strong>Linked devices</strong>
+                    and then <strong>Link a device</strong>.</li>
+                <li>Point your phone at this screen to
+                    scan the QR code.</li>
+            </ol>
+        </div>
+
+        <div class="qr-section">
+            <div class="qr-code" aria-label="Decorative QR code placeholder">
+                <div class="corner top-left"></div>
+                <div class="corner top-right"></div>
+                <div class="corner bottom-left"></div>
+            </div>
+
+            <p class="qr-note">
+                Demonstration QR placeholder<br>
+                Not a real login QR code
+            </p>
+        </div>
+
+    </section>
+
+    <section class="help-section">
+        <h2>Don't have WhatsApp on your phone?</h2>
+        <p>
+            Learn more about using
+            <a href="https://www.whatsapp.com/"
+               target="_blank" rel="noopener noreferrer">
+                WhatsApp
+            </a>.
+        </p>
+        <p>Keep your phone connected to link your device.</p>
+    </section>
+</main>
+
+<footer>
+    <p>College Practical Assignment | HTML and Internal CSS</p>
+    <p>Educational demonstration only</p>
+</footer>
+
+</body>
+</html>
